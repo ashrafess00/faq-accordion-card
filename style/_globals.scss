@@ -1,0 +1,57 @@
+body {
+  @include grd;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  background-size: cover;
+}
+.none {
+  display: none;
+}
+.flex {
+  display: flex;
+  &.clm {
+    flex-direction: column;
+  }
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}
+
+.grid {
+  display: grid;
+}
+
+// img {
+//     width: 100%;
+// }
+
+.arrow {
+  width: 0.66em;
+  height: 0.66em;
+  margin-right: 7em;
+  user-select: none;
+}
+
+.answers {
+  display: none;
+  margin-bottom: 5rem;
+
+  &.show {
+    display: block;
+
+    animation: showMe 0.5s forwards;
+  }
+}
+
+@keyframes showMe {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 1.9rem;
+  }
+}
+
+* {
+  user-select: none;
+}
